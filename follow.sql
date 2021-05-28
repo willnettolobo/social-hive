@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2021 at 04:14 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.6
+-- Tempo de geração: 28-Maio-2021 às 04:39
+-- Versão do servidor: 10.4.19-MariaDB
+-- versão do PHP: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `follow`
+-- Banco de dados: `follow`
 --
+CREATE DATABASE IF NOT EXISTS `follow` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `follow`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `post`
+-- Estrutura da tabela `post`
 --
 
 CREATE TABLE `post` (
@@ -33,18 +35,10 @@ CREATE TABLE `post` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `post`
---
-
-INSERT INTO `post` (`id`, `description`, `user_id`) VALUES
-(18, 'testando funciona', 4),
-(21, 'teste', 10);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Estrutura da tabela `user`
 --
 
 CREATE TABLE `user` (
@@ -56,24 +50,10 @@ CREATE TABLE `user` (
   `gender` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `username`, `password`, `name`, `email`, `gender`) VALUES
-(1, 'wilson', '123', 'Wilson Neto', 'willnettolobo@gmail.com', 'Male'),
-(2, 'lucas', '123', 'Lucas ', 'lucas@gmail.com', 'Male'),
-(3, 'ronaldo', '123', 'Ronaldinho', 'R10@gmail.com', 'Male'),
-(4, 'teste', 'teste', 'Laercio Marques', 'laercio@gmail.com', 'Male'),
-(6, 'laercio', '123', 'Laercio Marques', 'laercio@gmail.com', 'Male'),
-(8, 'colmeia', 'coleia', 'teste1', 'teste@gmail.com', 'Male'),
-(9, 'lala123', 'lala123', 'Laercio Marques', 'laercio@gmail.com', 'Male'),
-(10, 'Gabriel', '123', 'Luigi Gabriel', 'luigiaquino@gmail.com', 'Male');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usersocial`
+-- Estrutura da tabela `usersocial`
 --
 
 CREATE TABLE `usersocial` (
@@ -83,42 +63,24 @@ CREATE TABLE `usersocial` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `usersocial`
---
-
-INSERT INTO `usersocial` (`id`, `seguidor`, `seguindo`) VALUES
-(1, 3, 1),
-(2, 6, 1),
-(3, 6, 2),
-(4, 1, 2),
-(5, 8, 9),
-(6, 9, 8),
-(7, 1, 6),
-(8, 6, 1),
-(9, 6, 9),
-(10, 4, 3),
-(11, 4, 1),
-(12, 10, 1);
-
---
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `post`
+-- Índices para tabela `post`
 --
 ALTER TABLE `post`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `user`
+-- Índices para tabela `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usersocial`
+-- Índices para tabela `usersocial`
 --
 ALTER TABLE `usersocial`
   ADD PRIMARY KEY (`id`),
@@ -126,39 +88,39 @@ ALTER TABLE `usersocial`
   ADD KEY `seguindo` (`seguindo`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `post`
+-- AUTO_INCREMENT de tabela `post`
 --
 ALTER TABLE `post`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `usersocial`
+-- AUTO_INCREMENT de tabela `usersocial`
 --
 ALTER TABLE `usersocial`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- Constraints for dumped tables
+-- Restrições para despejos de tabelas
 --
 
 --
--- Constraints for table `post`
+-- Limitadores para a tabela `post`
 --
 ALTER TABLE `post`
   ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
 --
--- Constraints for table `usersocial`
+-- Limitadores para a tabela `usersocial`
 --
 ALTER TABLE `usersocial`
   ADD CONSTRAINT `usersocial_ibfk_1` FOREIGN KEY (`seguidor`) REFERENCES `user` (`id`),
