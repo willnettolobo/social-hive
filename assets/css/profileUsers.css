@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+nav {
+    width: 100%;
+
+    display: flex;
+
+    position: fixed;
+
+    background-color: #ffff0f;
+
+    z-index: 99;
+}
+
+nav a.title {
+
+    color: black;
+
+    margin: auto 20px auto 40px;
+
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+
+nav li {
+    display: inline;
+    inline-size: 3rem;
+
+    text-decoration: none;
+    list-style: none;
+    margin-left: 20px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:black;
+}
+
+nav a.sign-out{
+    color: black;
+
+    margin: auto 20px auto 40px;
+
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 300;
+    
+}
+
+ul.start-navbar {
+    margin-right: auto;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+    background-position: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.login-box{
+    width: 450px;
+    height: 550px;
+    background: black;
+    color: white;
+    left: 50%;
+    bottom: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, 50%);
+    border-radius: 30px;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+main form label {
+    display: flex;
+    flex-direction: column;
+}
+
+main form label span {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+main h1 {
+    color: white;
+    font-size: 3rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+
+main form input.text-field {
+    background: white;
+    width: 250px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid #ffff0f;
+    border-radius: 8px;
+}
+
+main form input.button {
+    margin-top: 3rem;
+    background: white;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 150px;
+    height: 50px;
+}
+
+.user-title {
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5;
+    font-size: 2rem;
+    color: #ffff0f;
+}
+
+.following {
+    display: inline-block;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    flex-direction: column;
+    text-align: left;
+    list-style: none;
+    
+    margin: 15px;
+}
+
+.followers {
+    display: inline-block;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-bottom: 35px;
+    list-style: none;
+
+    text-align: left;
+    margin: 15px;
+}
+
+.edit_profile {
+    display: inline-block;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-bottom: 35px;
+    list-style: none;
+
+    text-align: left;
+    margin: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+

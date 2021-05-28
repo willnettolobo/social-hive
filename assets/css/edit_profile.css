@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #ffff0f;
+    background-position: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.login-box{
+    width: 450px;
+    height: 740px;
+    background: black;
+    color: white;
+    left: 50%;
+    bottom: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, 50%);
+    border-radius: 30px;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+
+main form input.text-field-grey {
+    background: grey;
+    width: 250px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    cursor: default;
+    font-size: 1rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+}
+
+main form label {
+    display: flex;
+    flex-direction: column;
+}
+
+main form label span {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+main h1 {
+    color: white;
+    font-size: 3rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+
+main form input.text-field {
+    background: white;
+    width: 250px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+}
+
+main form select {
+    background: white;
+    width: 270px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+}
+
+main form input.button {
+    margin-top: 3rem;
+    background: white;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 150px;
+    height: 50px;
+}
+
+
+
